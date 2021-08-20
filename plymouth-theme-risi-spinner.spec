@@ -50,3 +50,4 @@ fi
 	
 %changelog
 * Thu Aug 19 2021 PizzaLovingNerd - 1.0
+- spec file created

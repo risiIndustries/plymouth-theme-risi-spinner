@@ -17,9 +17,9 @@ Requires(post): plymouth-scripts
 Plymouth Theme for risiOS
 
 %prep
+%autosetup -n risi-plymouth-theme-main
 
 %build
-%autosetup -n risi-plymouth-theme-main
 
 %install
 mkdir -p %{buildroot}%{_datadir}/plymouth/themes/risi-spinner

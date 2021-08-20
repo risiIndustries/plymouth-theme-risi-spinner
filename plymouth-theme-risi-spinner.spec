@@ -19,10 +19,11 @@ Plymouth Theme for risiOS
 %prep
 
 %build
+%autosetup -n risi-plymouth-theme-main
 
 %install
 mkdir -p %{buildroot}%{_datadir}/plymouth/themes/risi-spinner
-install -m 0644 %{themename}.plymouth *.png %{buildroot}%{_datadir}/plymouth/themes/risi-spinner
+install -m 0644 %{themename}.plymouth %{_builddir}*.png %{_datadir}/plymouth/themes/risi-spinner
 %{_builddir}
 
 %post

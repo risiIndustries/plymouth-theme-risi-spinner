@@ -7,8 +7,8 @@ Release:        1%{?dist}
 Summary:        risiOS Plymouth Theme
  
 License:        GPLv2+
-URL:            https://github.com/risiOS/risi-plymouth-theme
-Source0:        https://github.com/risiOS/risi-plymouth-theme/archive/refs/heads/main.tar.xz
+URL:            https://github.com/risiOS/plymouth-theme-risi-spinner
+Source0:        https://github.com/risiOS/plymouth-theme-risi-spinner/archive/refs/heads/main.tar.xz
 BuildArch:      noarch
 Requires:       plymouth-plugin-two-step >= 0.7.0
 Requires(post): plymouth-scripts
@@ -17,7 +17,7 @@ Requires(post): plymouth-scripts
 Plymouth Theme for risiOS
 
 %prep
-%autosetup -n risi-plymouth-theme-main
+%autosetup -n plymouth-theme-risi-spinner-main
 
 %build
 

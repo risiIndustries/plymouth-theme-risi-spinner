@@ -17,7 +17,7 @@ Requires(post): plymouth-scripts
 Plymouth Theme for risiOS
 
 %prep
-%autosetup -n plymouth-theme-risi-spinner-${version}
+%autosetup -n plymouth-theme-risi-spinner-%{version}
 
 %build
 

@@ -23,8 +23,7 @@ Plymouth Theme for risiOS
 
 %install
 mkdir -p %{buildroot}%{_datadir}/plymouth/themes/risi-spinner
-install -m 0644 %{themename}.plymouth %{_builddir}*.png %{_datadir}/plymouth/themes/risi-spinner
-%{_builddir}
+install -m 0644 %{themename}.plymouth *.png %{buildroot}%{_datadir}/plymouth/themes/risi-spinner
 
 %post
 export LIB=%{_lib}
@@ -43,7 +42,6 @@ if [ $1 -eq 0 ]; then
 fi
 	
 %files
-%doc README
 %dir %{_datadir}/plymouth/themes/%{themename}
 %{_datadir}/plymouth/themes/%{themename}/*.png
 %{_datadir}/plymouth/themes/%{themename}/%{themename}.plymouth

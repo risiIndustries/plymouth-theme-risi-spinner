@@ -3,7 +3,7 @@
 
 Name:           plymouth-theme-%{themename}
 Version:        1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        risiOS Plymouth Theme
  
 License:        GPLv2+

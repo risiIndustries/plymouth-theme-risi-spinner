@@ -5,7 +5,7 @@ ModuleName=two-step
 [two-step]
 Font=Cantarell 12
 TitleFont=Cantarell Light 30
-ImageDir=/usr/share/plymouth/themes/spinner
+ImageDir=/usr/share/plymouth/themes/risi-spinner
 DialogHorizontalAlignment=.5
 DialogVerticalAlignment=.382
 TitleHorizontalAlignment=.5
@@ -18,7 +18,7 @@ Transition=none
 TransitionDuration=0.0
 BackgroundStartColor=0x282828
 BackgroundEndColor=0x282828
-ProgressBarBackgroundColor=0x000000
+ProgressBarBackgroundColor=0x282828
 ProgressBarForegroundColor=0xffffff
 MessageBelowAnimation=true
 

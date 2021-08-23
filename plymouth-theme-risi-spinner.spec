@@ -24,8 +24,9 @@ Plymouth Theme for risiOS
 %build
 
 %install
-mkdir -p %{buildroot}%{_datadir}/plymouth/themes/risi-spinner
-install -m 0644 bgrt.plymouth %{buildroot}%{_datadir}/plymouth/themes/spinner
+mkdir -p %{buildroot}%{_datadir}/plymouth/themes/spinner
+mkdir -p %{buildroot}%{_datadir}/plymouth/themes/bgrt
+install -m 0644 bgrt.plymouth %{buildroot}%{_datadir}/plymouth/themes/bgrt
 install -m 0644 spinner.plymouth *.png %{buildroot}%{_datadir}/plymouth/themes/spinner
 
 %post

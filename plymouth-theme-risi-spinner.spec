@@ -1,7 +1,6 @@
-%define themename risi-spinner
 %define set_theme %{_sbindir}/plymouth-set-default-theme
 
-Name:           plymouth-theme-%{themename}
+Name:           plymouth-theme-risi-spinner
 Version:        1.0
 Release:        2%{?dist}
 Summary:        risiOS Plymouth Theme
@@ -13,6 +12,9 @@ BuildArch:      noarch
 Requires:       plymouth-plugin-two-step >= 0.7.0
 Requires(post): plymouth-scripts
 
+Provides: plymouth-theme-spinner
+Conflicts: plymouth-theme-spinner
+
 %description
 Plymouth Theme for risiOS
 
@@ -23,28 +25,28 @@ Plymouth Theme for risiOS
 
 %install
 mkdir -p %{buildroot}%{_datadir}/plymouth/themes/risi-spinner
-install -m 0644 %{themename}.plymouth *.png %{buildroot}%{_datadir}/plymouth/themes/risi-spinner
+install -m 0644 bgrt.plymouth %{buildroot}%{_datadir}/plymouth/themes/spinner
+install -m 0644 spinner.plymouth *.png %{buildroot}%{_datadir}/plymouth/themes/spinner
 
 %post
 export LIB=%{_lib}
 # on initial install, set this as the new theme
 if [ $1 -eq 1 ]; then
-    %{set_theme} %{themename}
+    %{set_theme} bgrt
 fi
  
 %postun
 export LIB=%{_lib}
 # if uninstalling, reset to boring meatless default theme
 if [ $1 -eq 0 ]; then
-    if [ "$(%{set_theme})" == "%{themename}" ]; then
+    if [ "$(%{set_theme})" == "bgrt" ]; then
         %{set_theme} --reset
     fi
 fi
 	
 %files
-%dir %{_datadir}/plymouth/themes/%{themename}
-%{_datadir}/plymouth/themes/%{themename}/*.png
-%{_datadir}/plymouth/themes/%{themename}/%{themename}.plymouth
+%{_datadir}/plymouth/themes/bgrt
+%{_datadir}/plymouth/themes/spinner
 	
 %changelog
 * Thu Aug 19 2021 PizzaLovingNerd - 1.0

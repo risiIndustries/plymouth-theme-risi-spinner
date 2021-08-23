@@ -1,8 +1,8 @@
 %define set_theme %{_sbindir}/plymouth-set-default-theme
 
 Name:           plymouth-theme-risi-spinner
-Version:        1.0
-Release:        2%{?dist}
+Version:        1.1
+Release:        1%{?dist}
 Summary:        risiOS Plymouth Theme
  
 License:        GPLv2+

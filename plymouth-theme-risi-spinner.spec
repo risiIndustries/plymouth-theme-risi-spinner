@@ -1,8 +1,8 @@
 %define set_theme %{_sbindir}/plymouth-set-default-theme
 
 Name:           plymouth-theme-risi-spinner
-Version:        1.2
-Release:        1%{?dist}
+Version:        0.9.5
+Release:        2%{?dist}
 Summary:        risiOS Plymouth Theme
  
 License:        GPLv2+
@@ -12,7 +12,7 @@ BuildArch:      noarch
 Requires:       plymouth-plugin-two-step >= 0.7.0
 Requires(post): plymouth-scripts
 
-Provides: plymouth-theme-spinner
+Provides: plymouth-theme-spinner = %{version}-%{_release}
 Conflicts: plymouth-theme-spinner
 
 %description
